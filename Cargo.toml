@@ -1,0 +1,12 @@
+[package]
+name = "wvr-image"
+version = "0.1.0"
+authors = ["gurke.club <contact@gurke.club>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0"
+image = "0.23"
+wvr-data = {git = "https://github.com/gurkeclub/wvr-data.git"}
+wvr-io = {git = "https://github.com/gurkeclub/wvr-io.git"}
+
