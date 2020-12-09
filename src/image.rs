@@ -6,7 +6,7 @@ use image::imageops::FilterType;
 use image::ImageFormat;
 
 use wvr_data::DataHolder;
-use wvr_io::InputProvider;
+use wvr_data::InputProvider;
 
 pub struct PictureProvider {
     name: String,
