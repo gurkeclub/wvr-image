@@ -43,6 +43,10 @@ impl PictureProvider {
 }
 
 impl InputProvider for PictureProvider {
+    fn set_name(&mut self, name: &str) {
+        self.name = name.to_owned();
+    }
+    
     fn provides(&self) -> Vec<String> {
         vec![self.name.clone()]
     }
