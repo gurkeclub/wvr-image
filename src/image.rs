@@ -29,7 +29,8 @@ impl PictureProvider {
         .context("Failed to load image file")?;
 
         let image = original_picture
-            .resize(
+            .clone()
+            .resize_exact(
                 resolution.0 as u32,
                 resolution.1 as u32,
                 FilterType::Lanczos3,
@@ -66,7 +67,8 @@ impl InputProvider for PictureProvider {
 
                     let image = self
                         .original_picture
-                        .resize(
+                        .clone()
+                        .resize_exact(
                             self.resolution.0 as u32,
                             self.resolution.1 as u32,
                             FilterType::Lanczos3,
@@ -85,7 +87,8 @@ impl InputProvider for PictureProvider {
 
                     let image = self
                         .original_picture
-                        .resize(
+                        .clone()
+                        .resize_exact(
                             self.resolution.0 as u32,
                             self.resolution.1 as u32,
                             FilterType::Lanczos3,
@@ -105,7 +108,8 @@ impl InputProvider for PictureProvider {
 
                     let image = self
                         .original_picture
-                        .resize(
+                        .clone()
+                        .resize_exact(
                             self.resolution.0 as u32,
                             self.resolution.1 as u32,
                             FilterType::Lanczos3,
@@ -135,7 +139,8 @@ impl InputProvider for PictureProvider {
 
                 let image = self
                     .original_picture
-                    .resize(
+                    .clone()
+                    .resize_exact(
                         self.resolution.0 as u32,
                         self.resolution.1 as u32,
                         FilterType::Lanczos3,
