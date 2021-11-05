@@ -6,8 +6,8 @@ use image::imageops::FilterType;
 use image::DynamicImage;
 use image::ImageFormat;
 
-use wvr_data::DataHolder;
-use wvr_data::InputProvider;
+use wvr_data::types::DataHolder;
+use wvr_data::types::InputProvider;
 
 pub struct PictureProvider {
     name: String,
@@ -29,7 +29,6 @@ impl PictureProvider {
         .context("Failed to load image file")?;
 
         let image = original_picture
-            .clone()
             .resize_exact(
                 resolution.0 as u32,
                 resolution.1 as u32,
